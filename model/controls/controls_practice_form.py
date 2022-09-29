@@ -16,8 +16,7 @@ def select_date_of_birthday():
 
 
 def fill_date_of_birthday(date: str):
-    browser.element("#dateOfBirthInput").click()
-    browser.element("#dateOfBirthInput").send_keys(Keys.COMMAND + "a").type(date).press_enter()
+    browser.element("#dateOfBirthInput").click().send_keys(Keys.COMMAND + "a").type(date).press_enter()
 
 
 def submit():
