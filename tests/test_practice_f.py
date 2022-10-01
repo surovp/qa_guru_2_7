@@ -1,6 +1,6 @@
 from model import controls
 from model import pages
-
+from selene.support.conditions import have
 
 def test_form(open_and_close_form):
 
@@ -16,4 +16,15 @@ def test_form(open_and_close_form):
     controls.select_state_and_city("Haryana", "Karnal")
     controls.submit()
 
-    pages.check_data_form()
+    pages.table_result.should(have.text("Ivan"))
+    pages.table_result.should(have.text("Ivanov"))
+    pages.table_result.should(have.text("ivan123@test.com"))
+    pages.table_result.should(have.text("Male"))
+    pages.table_result.should(have.text("5550001100"))
+    pages.table_result.should(have.text("25 January,1997"))
+    pages.table_result.should(have.text("English, Economics"))
+    pages.table_result.should(have.text("Music"))
+    pages.table_result.should(have.text("file_1.jpg"))
+    pages.table_result.should(have.text("Russia,Moscow"))
+    pages.table_result.should(have.text("Haryana"))
+    pages.table_result.should(have.text("Karnal"))

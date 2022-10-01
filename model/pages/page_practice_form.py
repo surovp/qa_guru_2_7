@@ -1,6 +1,7 @@
 from typing import Tuple
-from selene.support.conditions import have
 from selene.support.shared import browser
+
+table_result = browser.element(".table-responsive")
 
 
 def fill_fullname(first_name: str, last_name: str):
@@ -23,19 +24,3 @@ def fill_subjects(subjects: Tuple):
 
 def fill_curent_adress(adress: str):
     browser.element("#currentAddress").type(adress)
-
-
-def check_data_form():
-    browser.element('#example-modal-sizes-title-lg').should(have.text('Thanks for submitting the form'))
-    browser.element(".table-responsive").should(have.text("Ivan"))
-    browser.element(".table-responsive").should(have.text("Ivanov"))
-    browser.element(".table-responsive").should(have.text("ivan123@test.com"))
-    browser.element(".table-responsive").should(have.text("Male"))
-    browser.element(".table-responsive").should(have.text("5550001100"))
-    browser.element(".table-responsive").should(have.text("25 January,1997"))
-    browser.element(".table-responsive").should(have.text("English, Economics"))
-    browser.element(".table-responsive").should(have.text("Music"))
-    browser.element(".table-responsive").should(have.text("file_1.jpg"))
-    browser.element(".table-responsive").should(have.text("Russia,Moscow"))
-    browser.element(".table-responsive").should(have.text("Haryana"))
-    browser.element(".table-responsive").should(have.text("Karnal"))
