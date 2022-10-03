@@ -3,5 +3,5 @@ from model.pages.page_practice_form import \
     fill_user_email, \
     fill_user_number_phone, \
     fill_subjects, \
-    fill_curent_adress, \
-    table_result
+    fill_current_address, \
+    check_data_in_table
