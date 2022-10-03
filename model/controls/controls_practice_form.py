@@ -1,14 +1,16 @@
 import os
 import sys
+import allure
 from selene.support.shared import browser
 from selenium.webdriver import Keys
 
-
+@allure.step("Выбираем пол")
 def select_gender_male():
     gender_male = browser.element("#gender-radio-1").double_click()
     gender_male.double_click()
 
 
+@allure.step("Выбираем дату рождения")
 def select_date_of_birthday():
     browser.element("#dateOfBirthInput").click()
     month = browser.element(".react-datepicker__month-select").type("January")
@@ -16,6 +18,7 @@ def select_date_of_birthday():
     browser.element("[aria-label='Choose Saturday, January 25th, 1997']").click()
 
 
+@allure.step("Выбираем дату рождения")
 def fill_date_of_birthday(date: str):
     name_os = sys.platform
     if name_os == 'darwin':
@@ -24,18 +27,22 @@ def fill_date_of_birthday(date: str):
         browser.element("#dateOfBirthInput").send_keys(Keys.CONTROL + 'a').type(date).press_enter()
 
 
+@allure.step("Жмем подтвердить")
 def submit():
     browser.element('#submit').press_enter()
 
 
+@allure.step("Выбираем хобби")
 def select_hobby_music():
     hobby_music = browser.element("[for=hobbies-checkbox-3]").click()
 
 
+@allure.step("Загружаем файл")
 def download_picture():
     browser.element("#uploadPicture").send_keys(os.path.abspath("../resourses/file_1.jpg"))
 
 
+@allure.step("Выбираем штат и город")
 def select_state_and_city(state, city):
     state_ = browser.element("#react-select-3-input")
     state_.type(state).press_enter()

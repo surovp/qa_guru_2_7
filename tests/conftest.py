@@ -1,5 +1,6 @@
 import pytest
 from selene.support.shared import browser
+import allure
 
 
 @pytest.fixture(scope='function', autouse=True)
