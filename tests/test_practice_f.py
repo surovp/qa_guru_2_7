@@ -31,7 +31,7 @@ def test_form(setup_browser):
                 ('Date of Birth', '25 January,1997'),
                 ('Subjects', 'English, Economics'),
                 ('Hobbies', 'Music'),
-                ('Picture', 'file_1.jpg'),
+                #('Picture', 'file_1.jpg'),
                 ('Address', 'Russia,Moscow'),
                 ('State and City', 'Haryana Karnal')
             ]
