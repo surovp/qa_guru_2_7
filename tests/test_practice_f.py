@@ -16,7 +16,7 @@ def test_form(setup_browser):
         controls.select_date_of_birthday()
         pages.fill_subjects(("English", "Economics"))
         controls.select_hobby_music()
-        #controls.download_picture()
+        controls.download_picture()
         pages.fill_current_address("Russia,Moscow")
         controls.select_state_and_city("Haryana", "Karnal")
         controls.submit()
@@ -31,7 +31,7 @@ def test_form(setup_browser):
                 ('Date of Birth', '25 January,1997'),
                 ('Subjects', 'English, Economics'),
                 ('Hobbies', 'Music'),
-                #('Picture', 'file_1.jpg'),
+                ('Picture', 'file_1.jpg'),
                 ('Address', 'Russia,Moscow'),
                 ('State and City', 'Haryana Karnal')
             ]

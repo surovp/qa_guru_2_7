@@ -1,6 +1,5 @@
 from typing import Tuple
 from selene import have
-import allure
 from selene.support.shared import browser
 
 

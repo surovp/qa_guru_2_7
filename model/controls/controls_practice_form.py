@@ -1,6 +1,5 @@
 import os
 import sys
-import allure
 from selene.support.shared import browser
 from selenium.webdriver import Keys
 
@@ -34,7 +33,7 @@ def select_hobby_music():
 
 
 def download_picture():
-    browser.element("#uploadPicture").send_keys(os.path.abspath("../resourses/file_1.jpg"))
+    browser.element("#uploadPicture").send_keys(os.path.abspath('../resourses/file_1.jpg'))
 
 
 def select_state_and_city(state, city):
