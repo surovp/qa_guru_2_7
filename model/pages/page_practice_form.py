@@ -1,7 +1,7 @@
 from typing import Tuple
 from selene import have
-from selene.support.shared import browser
 import allure
+from selene.support.shared import browser
 
 
 @allure.step("Вводим ФИО")

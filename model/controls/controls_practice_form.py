@@ -4,6 +4,7 @@ import allure
 from selene.support.shared import browser
 from selenium.webdriver import Keys
 
+
 @allure.step("Выбираем пол")
 def select_gender_male():
     gender_male = browser.element("#gender-radio-1").double_click()

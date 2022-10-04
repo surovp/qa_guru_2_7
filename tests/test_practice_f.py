@@ -1,15 +1,8 @@
-from allure_commons.types import Severity
 from model import controls
 from model import pages
-import allure
 
 
-@allure.tag("web demoqa")
-@allure.severity(Severity.CRITICAL)
-@allure.label("owner", "pavels")
-@allure.story("Проверка заполнение формы данными")
-@allure.step("Открываем сайт")
-def test_form(open_and_close_form):
+def test_form(setup_browser):
 
     pages.fill_fullname("Ivan", "Ivanov")
     pages.fill_user_email("ivan123@test.com")
