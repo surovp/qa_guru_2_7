@@ -16,7 +16,7 @@ def test_form(setup_browser):
         controls.select_date_of_birthday()
         pages.fill_subjects(("English", "Economics"))
         controls.select_hobby_music()
-        controls.download_picture()
+        #controls.download_picture()
         pages.fill_current_address("Russia,Moscow")
         controls.select_state_and_city("Haryana", "Karnal")
         controls.submit()
