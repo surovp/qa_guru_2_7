@@ -8,6 +8,7 @@ from utils import attach
 
 @pytest.fixture(scope='function')
 def setup_browser():
+    browser.config.base_url = 'https://demoqa.com'
     options = Options()
     selenoid_capabilities = {
         "browserName": "chrome",
@@ -24,8 +25,6 @@ def setup_browser():
         options=options)
 
     browser.config.driver = driver
-    with allure.step("Открываем браузер"):
-        browser.open('https://demoqa.com/automation-practice-form')
 
     yield
 
