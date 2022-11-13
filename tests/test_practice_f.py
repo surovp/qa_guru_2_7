@@ -1,6 +1,8 @@
+from selene import have
 from model import controls
 from model import pages
-from selene.support.conditions import have
+"test"
+
 
 def test_form(open_and_close_form):
 
